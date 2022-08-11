@@ -7,10 +7,12 @@ const fs = require('fs')
 // 입력 받은 문자열을 split() 함수를 통해 배열화한다. (split(' '), split('\n') 등)
 // 예) 2 3 입력시, inputData = ['2', '3']
 const inputData1 = fs.readFileSync('/dev/stdin').toString().split(' ')
-
 // options으로 인코딩을 string 자료형으로 넘기는 경우, toString을 할 필요없이 문자열 반환
 const inputData2 = fs.readFileSync(0, 'utf8').split(' ')
 
 //기본
 const fs = require('fs')
 const inputData = fs.readFileSync(0, 'utf8').toString().split(' ')
+
+//기본2
+const input = fs.readFileSync('/dev/stdin').toString().trim()
