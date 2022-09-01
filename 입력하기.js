@@ -15,4 +15,15 @@ const fs = require('fs')
 const inputData = fs.readFileSync(0, 'utf8').toString().split(' ')
 
 //기본2
-const input = fs.readFileSync('/dev/stdin').toString().trim()
+const input2 = fs.readFileSync('/dev/stdin').toString().trim()
+
+// 아래 위 배치
+const fs = require('fs')
+const filePath = process.platform === 'linux' ? '/dev/stdin' : './input.txt'
+let input = fs.readFileSync(filePath).toString().split('\n')
+
+const current = input[0].split(' ').map(Number)
+
+const currentHour = current[0]
+const currentMinute = current[1]
+const cookTime = Number(input[1])
