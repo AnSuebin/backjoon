@@ -1,12 +1,14 @@
 let fs = require('fs')
 let input = fs.readFileSync('/dev/stdin').toString().split('\n')
 
-for (let i = 0; i < input.length - 1; i++) {
+for (let i = 0; i < input.length; i++) {
   let A = Number(input[i].split(' ')[0])
   let B = Number(input[i].split(' ')[1])
-  console.log(A + B)
+  let output = A + B
 
-  if (A + B === 0) {
+  if (output === 0) {
     break
+  } else {
+    console.log(output)
   }
 }
